@@ -43,18 +43,12 @@ class MainActivity : ComponentActivity() {
         lifecycleScope.launch {
             downloadImage(
                 "background",
-                "https://console-uploads-staging.s3.eu-west-1.amazonaws.com/images/174010_1612439179_92a68673-80c8-4379-a652-d2a710265908.png"
+                "https://foodics-console-staging.s3.eu-west-1.amazonaws.com/images/174010_1644702776_9595b879-2c38-49bc-b11f-7d6873fb659c.jpeg"
             )
         }
 
         setContent {
             KtorClientTheme {
-                // A surface container using the 'background' color from the theme
-                val painter = rememberAsyncImagePainter(
-                    model = File(
-                        applicationContext.getExternalFilesDir(Environment.DIRECTORY_PICTURES)?.path + "/background"
-                    )
-                )
                 Surface(
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
